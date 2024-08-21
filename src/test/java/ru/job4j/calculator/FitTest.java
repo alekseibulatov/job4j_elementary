@@ -15,43 +15,35 @@ class FitTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-@Test
+    @Test
     void testWhenHeightMan165Then75() {
-        short height = 165;
-        double result = manWeight(height);
-        double expected = 75;
-        double precision = 0.01;
-        boolean success = Math.abs(result - expected) <= precision;
-        System.out.println("Test passed: " + success);
+        short input = 165;
+        double expected = 74.75;
+        double output = manWeight(input);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void testWhenHeightMan180Then92() {
-        short height = 180;
-        double result = manWeight(height);
-        double expected = 92;
-        double precision = 0.01;
-        boolean success = Math.abs(result - expected) <= precision;
-        System.out.println("Test passed: " + success);
+        short input = 175;
+        double expected = 86.25;
+        double output = manWeight(input);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void testWhenHeightWoman160Then58() {
-        short height = 160;
-        double result = womanWeight(height);
-        double expected = 58;
-        double precision = 0.01;
-        boolean success = Math.abs(result - expected) <= precision;
-        System.out.println("Test passed: " + success);
+        short input = 160;
+        double expected = 57.5;
+        double output = womanWeight(input);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
     void testWhenHeightWoman170Then69() {
-        short height = 170;
-        double result = womanWeight(height);
+        short input = 170;
         double expected = 69;
-        double precision = 0.01;
-        boolean success = Math.abs(result - expected) <= precision;
-        System.out.println("Test passed: " + success);
+        double output = womanWeight(input);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
